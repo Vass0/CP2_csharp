@@ -1,0 +1,14 @@
+@model IEnumerable<Prova.Mvc.Controllers.Produto>
+@{
+    Layout = "_Layout";
+}
+<h2>Produtos</h2>
+<table class="table table-striped">
+    <thead><tr><th>Id</th><th>Nome</th><th>SKU</th><th>Qtd</th><th>Preço</th></tr></thead>
+    <tbody>
+    @foreach (var p in Model)
+    {
+        <tr><td>@p.Id</td><td>@p.Nome</td><td>@p.SKU</td><td>@p.Quantidade</td><td>@p.Preco</td></tr>
+    }
+    </tbody>
+</table>
